@@ -29,7 +29,8 @@ def boyer_moore_horspool(pattern, text):
 
     return found_indexes
 
-patron = input("patron\n")
 texto = open('test.txt')
-result = boyer_moore_horspool(patron, texto.read())
-print(result)
+tic = time.perf_counter()
+result = boyer_moore_horspool("ingrese su texto", texto.read())
+print(len(result))
+print(tic)
