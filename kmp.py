@@ -29,8 +29,9 @@ class KMP:
 
 
 
+kmp = KMP()
 texto = open('test.txt')
 tic = time.perf_counter()
-result = boyer_moore_horspool("ingrese su texto", texto.read())
+result = kmp.search(texto.read(), sys.argv[1])
 print(len(result))
 print(tic)
