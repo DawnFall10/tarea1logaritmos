@@ -31,6 +31,6 @@ def boyer_moore_horspool(pattern, text):
 
 texto = open('test.txt')
 tic = time.perf_counter()
-result = boyer_moore_horspool("ingrese su texto", texto.read())
+result = boyer_moore_horspool(sys.argv[1], texto.read())
 print(len(result))
 print(tic)
