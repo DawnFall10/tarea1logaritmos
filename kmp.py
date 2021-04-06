@@ -29,11 +29,8 @@ class KMP:
 
 
 
-patron = input("patron\n")
-kmp = KMP()
 texto = open('test.txt')
-result = kmp.search(texto.read(), patron)
-print(result)
-# texto = open('test.txt')
-# print(texto.read())
-
+tic = time.perf_counter()
+result = boyer_moore_horspool("ingrese su texto", texto.read())
+print(len(result))
+print(tic)
