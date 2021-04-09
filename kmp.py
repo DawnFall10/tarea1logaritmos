@@ -29,9 +29,10 @@ class KMP:
 
 
 
-kmp = KMP()
-texto = open('test.txt')
 tic = time.perf_counter()
+kmp = KMP()
+texto = open('poe.txt')
 result = kmp.search(texto.read(), sys.argv[1])
 print(len(result))
-print(tic)
+tic2 = time.perf_counter()
+print(tic2 -tic)
