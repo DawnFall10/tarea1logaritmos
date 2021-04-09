@@ -1,3 +1,7 @@
+import sys
+import time
+
+
 class KMP:
     def partial(self, pattern):
         """ Calculate partial match table: String -> [Int]"""
