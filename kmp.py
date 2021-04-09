@@ -1,7 +1,3 @@
-import sys
-import time
-
-
 class KMP:
     def partial(self, pattern):
         """ Calculate partial match table: String -> [Int]"""
@@ -30,12 +26,3 @@ class KMP:
                 j = partial[j - 1]
 
         return ret
-
-# Main
-texto = open('textfiles/worksEdgarAllanPoe.txt', encoding='utf-8')
-pattern = sys.argv[1]
-result = KMP().search(texto.read(), pattern)
-tic = time.process_time()
-print("Búsqueda en Texto - KMP")
-print("Apariciones del patrón", "\'"+pattern+"\'", ":\t",len(result))
-print("Tiempo de ejecución (segundos):\t\t", tic)
