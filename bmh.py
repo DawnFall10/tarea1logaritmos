@@ -30,7 +30,7 @@ def boyer_moore_horspool(pattern, text):
     return found_indexes
 
 tic = time.perf_counter()
-texto = open('poe.txt')
+texto = open('poe.txt', encoding='utf-8')
 result = boyer_moore_horspool(sys.argv[1], texto.read())
 print(len(result))
 tic2 = time.perf_counter()
