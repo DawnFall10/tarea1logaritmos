@@ -31,9 +31,11 @@ def boyer_moore_horspool(pattern, text):
 
     return found_indexes
 
-tic = time.process_time()
+# Main
 texto = open('textfiles/worksEdgarAllanPoe.txt', encoding='utf-8')
-result = boyer_moore_horspool(sys.argv[1], texto.read())
-print(len(result))
-tic2 = time.process_time()
-print(tic2 -tic)
+pattern = sys.argv[1]
+result = boyer_moore_horspool(pattern, texto.read())
+tic = time.process_time()
+print("Búsqueda en Texto - BMH")
+print("Apariciones del patrón", "\'"+pattern+"\'", ":\t",len(result))
+print("Tiempo de ejecución (segundos):\t\t", tic)

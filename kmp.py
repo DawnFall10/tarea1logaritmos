@@ -31,12 +31,11 @@ class KMP:
 
         return ret
 
-
-
-tic = time.process_time()
-kmp = KMP()
+# Main
 texto = open('textfiles/worksEdgarAllanPoe.txt', encoding='utf-8')
-result = kmp.search(texto.read(), sys.argv[1])
-print(len(result))
-tic2 = time.process_time()
-print(tic2 -tic)
+pattern = sys.argv[1]
+result = KMP().search(texto.read(), pattern)
+tic = time.process_time()
+print("Búsqueda en Texto - KMP")
+print("Apariciones del patrón", "\'"+pattern+"\'", ":\t",len(result))
+print("Tiempo de ejecución (segundos):\t\t", tic)
