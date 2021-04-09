@@ -31,7 +31,7 @@ class KMP:
 
 tic = time.perf_counter()
 kmp = KMP()
-texto = open('poe.txt', encoding='utf-8')
+texto = open('textfiles/worksEdgarAllanPoe.txt', encoding='utf-8')
 result = kmp.search(texto.read(), sys.argv[1])
 print(len(result))
 tic2 = time.perf_counter()
